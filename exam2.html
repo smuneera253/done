@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>userinput</title>
+	<head>
+	<style>
+		
+		.name{
+			
+			
+			padding:10px 150px 8px 0px;
+			margin:left;
+			margin-top:10px;
+			border:2px solid black;
+			font-size:20px;
+			margin-left:500px;
+		}
+		.user{
+		
+			
+			padding:10px 150px 8px 0px;
+			margin:left;
+			margin-top:10px;
+			border:2px solid black;
+			font-size:20px;
+			margin-left:500px;
+		}
+		.email{
+			
+			padding:10px 150px 8px 0px;
+			margin:left;
+			margin-top:10px;
+			border:2px solid black;
+			font-size:20px;
+			margin-left:500px;
+		}
+		.phone{
+			
+			padding:10px 150px 8px 0px;
+			margin:left;
+			margin-top:10px;
+			border:2px solid black;
+			font-size:20px;
+			margin-left:500px;
+		}
+		.font{
+			font-size:20px;
+			margin-left:500px;
+		
+		}
+		.userdetails{
+			
+			margin-top:20px;
+			display:flex;
+			width:900px;
+			height:100px;
+			flex-wrap:wrap;
+			margin-left:500px;
+		}
+		
+		.btn{
+			padding:10px 60px 6px 65px;
+			font-size:20px;
+			margin-top:15px;
+			margin-left:500px;
+			border-radius:0px;
+			background-color:red;
+			
+		}
+		.edit{
+			padding:10px 85px 6px 75px;
+			font-size:20px;
+			margin-top:15px;
+			margin-left:20px;
+			border-radius:0px;
+			background-color:red;
+			
+		}
+	</style>
+	<body>
+		<div>
+			<p class="font">Name:</p>
+			<input type="text" palaceholder="name" class="name"/></input><br>
+			
+			<p class="font">UserName:</p>
+			<input type="text" palaceholder="username" class="user"/></input><br>
+			
+			<p class="font">Email:</p>
+			<input type="email" palaceholder="email" class="email"/></input><br>
+			
+			<p class="font">phone:</p>
+			<input type="Number" palaceholder="phone" class="phone"/></input><br>
+			
+			<button class="btn">submit</button>
+			
+			<button class="edit">eidit</button>
+			
+		</div>
+		<div class="userdetails"></div>
+	</body>
+	<script>
+	
+			let button = document.querySelector(".btn");
+			let name = document.querySelector(".name");
+			let user = document.querySelector(".user");
+			let email = document.querySelector(".email");
+			let phone = document.querySelector(".phone");
+			let storedata = document.querySelector(".userdetails");
+			let eidting = document.querySelector(".edit");
+			
+			button.onclick = function()
+			{
+				let store = document.createElement("div")
+				let nametag= document.createElement("div");
+				nametag.style.marginRight = "40px";
+				nametag.innerText= "name:" +(name.value);
+				
+				
+				let usertag= document.createElement("div");
+				usertag.style.marginRight = "40px";
+				usertag.innerText ="user:" +(user.value);
+				
+				let emailtag= document.createElement("div");
+				emailtag.style.marginRight = "40px";
+				emailtag.innerText ="email:" +(email.value);
+				
+				let phonetag= document.createElement("div");
+				phonetag.style.marginRight = "40px";
+				phonetag.innerText ="user:" +(phone.value);
+				
+				store.append(nametag,usertag,emailtag,phonetag);
+				store.style.padding="30px 30px 30px 30px 80px";
+				store.style.backgroundColor = "gray ";
+				store.style.marginLeft = "40px";
+				store.style.marginTop ="40px";
+				storedata.append(store);
+				
+			}
+			
+	</script>
+</html>
